@@ -86,3 +86,16 @@ EOF
 
 echo -e "\e[1;34m🎨 Готово! Lunix оформлена в современном стиле.\e[0m"
 echo -e "\e[1;32m✅ Перезагрузи систему и наслаждайся новым стилем.\e[0m"
+echo -e "\e[1;34m🎨 Применяем тему и иконки...\e[0m"
+xfconf-query -c xsettings -p /Net/ThemeName -s "Arc-Dark"
+xfconf-query -c xsettings -p /Net/IconThemeName -s "Papirus-Dark"
+xfconf-query -c xsettings -p /Gtk/FontName -s "Roboto 10"
+xfconf-query -c xsettings -p /Gtk/CursorThemeName -s "Adwaita"
+xfconf-query -c xsettings -p /Gtk/EnableAnimations -s true
+
+echo -e "\e[1;34m🔁 Перезапускаем панель и композитинг...\e[0m"
+xfce4-panel -r
+xfwm4 --replace &
+
+echo -e "\e[1;34m🎨 Готово! Lunix оформлена в современном стиле.\e[0m"
+echo -e "\e[1;32m✅ Перезагрузи систему и наслаждайся новым стилем.\e[0m"
